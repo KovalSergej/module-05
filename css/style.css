@@ -20,6 +20,7 @@ body {
 }
 
 .main-navigation {
+    position: relative;
     height: 92px;
 }
 
@@ -36,6 +37,10 @@ body {
 }
 
 .logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -44,7 +49,6 @@ body {
     color: #626262;
     float: left;
     text-transform: uppercase;
-    margin: 38px 15px 32px 15px;
 }
 
 .logo::first-letter {
@@ -53,6 +57,10 @@ body {
 }
 
 .site-navigation {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
@@ -60,8 +68,7 @@ body {
     font-size: 14px;
     list-style: none;
     float: right;
-    padding: 0px;
-    margin: 38px 15px 32px 15px;
+    padding-left: 0px;
 }
 
 .site-navigation a {
@@ -121,20 +128,32 @@ body {
 
 .slider-content {
     position: absolute;
-    top: 220px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 120px;
-    width: 1140px;
-    padding: 0 15px;
+    padding: 0px;
+}
+
+.slider-title {
+    position: relative;
+    content: '';
+    width: 745px;
+    height: 110px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 
 .slider-title h6 {
     position: absolute;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
-    height: 100px;
-    width: 770px;
-    top: 0;
-    left: 185px;
+    width: 745px;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%);
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
@@ -187,8 +206,6 @@ body {
     text-transform: uppercase;
     position: absolute;
     bottom: 15px;
-    left: 185px;
-    width: 465px;
     height: 20px;
     margin: 0px 0px;
     padding: 0px 0px;
@@ -224,13 +241,6 @@ body {
     opacity: .5;
 }
 
-.all-posts {
-    margin: 0px auto;
-    margin: 0px auto 0px auto;
-    padding: 0px 0px;
-    width: 1140px;
-}
-
 .section-title h1{
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
@@ -254,7 +264,6 @@ body {
     padding: 0px;
     list-style: none;
     margin: 0 auto;
-    width: 1140px;
 }
 
 .all-posts-list-item {
@@ -262,7 +271,8 @@ body {
     content: '';
     z-index: 0;
     float: left;
-    margin: 35px 15px 0px 15px;    
+    margin: 35px 15px 0px 15px;
+    width: 255px;    
 }
 
 .all-posts-list-item + .all-posts-list-item {
@@ -298,6 +308,8 @@ body {
 .product-name {
     float: left;
     color: white;
+    text-decoration: none;
+    width: 190px;
 }
 
 .product-price {
@@ -335,6 +347,11 @@ body {
     opacity: 0;
     z-index: 2;
 }
+
+.all-posts-list-item:hover .posts-img-hover-menu {
+    opacity: 1;
+}
+
 
 .heart {
     width: 50px;
@@ -417,10 +434,6 @@ body {
     left: 0;
     background-position-x: 50%;
     background-position-y: 50%;
-}
-
-.all-posts-list-item:hover .posts-img-hover-menu {
-    opacity: 1;
 }
 
 .footer {
