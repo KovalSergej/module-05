@@ -293,6 +293,11 @@ body {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
 }
+
+.product-description h4{
+    margin: 0px;
+}
+
 .all-posts-list-item:hover .product-description {
     background: linear-gradient(to right,
     #1abc9c 79%,  #7fd9c7  79%,#7fd9c7 100%);
