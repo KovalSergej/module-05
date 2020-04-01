@@ -94,7 +94,7 @@ body {
 
 .nav-link:hover, 
 .nav-link:focus,
-.nav-link.active {
+.nav-link:active {
     color: #1abc9c;
 }
 
@@ -227,7 +227,7 @@ body {
 
 .slider-links:hover, 
 .slider-links:focus,
-.slider-links.active {
+.slider-links:active {
     color: #1abc9c;
 }
 
@@ -325,30 +325,15 @@ body {
     text-align: center;
 }
 
-.posts-img-hover {
-    background-color: rgb(0, 0, 0);
-    width: 255px;
-    height: 282px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-    border: 10px solid white;
-}
-
-.all-posts-list-item:hover .posts-img-hover {
-    opacity: .52;
-    z-index: 1;
-}
-
 .posts-img-hover-menu {
     position: absolute;
     content: '';
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 170px;
-    height: 111px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(0, 0, 0, .52);
+    width: 255px;
+    height: 282px;
+    border: 10px solid white;
     opacity: 0;
     z-index: 2;
 }
@@ -357,25 +342,29 @@ body {
     opacity: 1;
 }
 
+.hover-menu-item {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .heart {
+    float: left;
     width: 50px;
     height: 50px;
     border: 1px solid white;
     margin: 2px;
     background-image: url(../img/new-collection/heart.png);
     background-color: transparent;
-    
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;
 }
 
-.heart:hover {
-    background-color: #1abc9c;
-}
-
 .arrows {
+    float: left;
     width: 50px;
     height: 50px;
     border: 1px solid white;
@@ -387,11 +376,8 @@ body {
     background-position-y: 50%;
 }
 
-.arrows:hover {
-    background-color: #1abc9c;
-}
-
 .clock {
+    float: left;
     width: 50px;
     height: 50px;
     border: 1px solid white;
@@ -403,11 +389,8 @@ body {
     background-position-y: 50%;
 }
 
-.clock:hover {
-    background-color: #1abc9c;
-}
-
 .cart {
+    float: left;
     position: relative;
     width: 165px;
     height: 50px;
@@ -424,10 +407,6 @@ body {
     text-align: right;
 }
 
-.cart:hover {
-    background-color: #1abc9c;
-}
-
 .cart::before {
     background-image: url(../img/new-collection/cart.png);
     width: 50px;
@@ -439,6 +418,14 @@ body {
     left: 0;
     background-position-x: 50%;
     background-position-y: 50%;
+}
+
+.heart:hover,
+.arrows:hover,
+.clock:hover,
+.cart:hover {
+    background-color: #1abc9c;
+    border: 1px solid #1abc9c;
 }
 
 .footer {
